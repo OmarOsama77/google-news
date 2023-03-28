@@ -14,15 +14,13 @@ class NewsViewModel extends GetxController{
       if(response.statusCode==200){
         try{
           var r =jsonDecode(response.body);
-          print('r = $r');
-        print('${response.body } sadasdsad');
         return NewsModel.fromJson(r);
         }catch(e){
-          print('There is error ${e.toString()}');
+          print('Error ${e.toString()}');
       }
 
       }else{
-        print('Error in the status code maybe!!');
+        print('Error');
     }
 
   }
